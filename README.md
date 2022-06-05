@@ -1,3 +1,3 @@
 # Ashley-s-Webgame
 
-Thanks for playing Ashley's Webgame! This has been very nostalgic of my childhood and I have always loved playing both board and computer games.  I love the creative process and being able to make something from nothing...which is precisely what drew me to web development in the first place.  Anyway, good luck and have fun!!!!
+The game Battleship has always been a very fond and nostalgic memory of my childhood.  I like strategy games and remember playing this game a lot with my family when I was growing up. Thank you for playing my game and have fun!
