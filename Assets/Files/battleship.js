@@ -1,9 +1,28 @@
 var view = {
-  function(msg) {
+  displayMessage: function (msg) {
     var messageArea = document.getElementById("messageArea");
     messageArea.innerHTML = msg;
   },
 
-  displayHit: function (location) {},
-  displayMiss: function (location) {},
+  displayHit: function (location) {
+    var cell = document.getElementById(location);
+    cell.setAttribute("class", "hit");
+  },
+
+  displayMiss: function (location) {
+    var cell = document.getElementById(location);
+    cell.setAttribute("class", "miss");
+  },
 };
+
+//set up "model" parameters for ships//
+
+//ships locations//
+
+//fire function//
+
+//generate ships function//
+
+//guess functions//
+
+//event handlers for button click and keypress//

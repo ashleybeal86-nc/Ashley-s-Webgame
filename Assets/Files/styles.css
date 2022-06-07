@@ -1,5 +1,5 @@
 body {
-background-color: black;
+  background-color: black;
 }
 
 div#gameboard {
@@ -10,7 +10,6 @@ div#gameboard {
   background-image: url ("gameboard.jpg");
   background-color: #cccccc;
 }
- 
 
 div#messageArea {
   position: absolute;
@@ -33,3 +32,10 @@ form input {
   font-size: 1em;
 }
 
+.hit {
+  background: url ("ship.png") no-repeat center;
+}
+
+.miss {
+  background: url ("miss.png") no-repeat center;
+}
