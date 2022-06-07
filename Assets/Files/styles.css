@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+background-color: black;
 }
 
 div#gameboard {
@@ -7,8 +7,10 @@ div#gameboard {
   width: 1024px;
   height: 823px;
   margin: auto;
-  background: url ("bullseye.png") no-repeat;
+  background-image: url ("gameboard.jpg");
+  background-color: #cccccc;
 }
+ 
 
 div#messageArea {
   position: absolute;
