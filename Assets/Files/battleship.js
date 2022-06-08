@@ -30,7 +30,7 @@ var ships = [
   {locations: [0,0,0], hits: ["", "", ""]},
 ];
 
-// function to randomly generate ship locations (Math.random? and else/if)//
+// function to randomly generate ship locations (Math.random or Math.floor or both maybe?--need to research this more)//
   //also need to generate a starting column/row and new ship location//
 generateShip = function() {
 
