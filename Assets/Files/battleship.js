@@ -23,26 +23,42 @@ var shipmodel = {
   shipsSunk: 0,
 };
 
-//ships locations (array for coordinates), work on function to randomly generate ship locations//
-ships: [
+//ships locations (arrays for coordinates and hits)//
+var ships = [
   {locations: [0,0,0], hits: ["", "", ""]},
   {locations: [0,0,0], hits: ["", "", ""]},
   {locations: [0,0,0], hits: ["", "", ""]},
+];
 
-],
+// function to randomly generate ship locations (Math.random? and else/if)//
+  //also need to generate a starting column/row and new ship location//
+generateShip = function() {
+
+}
+
 
 //fire function, (index location sor ships--for-loop)//
-fire: function(guess) {
+fire = function(guess) {
   for (var i = 0; i < this.numShips; i++)
 }
 
-//isSunk function (use index location for ships and boolean to determine if ship is sunk)
+//Sunk function (use index location for ships and boolean to determine if ship is sunk?)
+isSunk = function(ship){
 
+}
 
 
 //function for guesses, (add criteria that =null if guess outside of coordinate area)//
-  //use parseGuess maybe?? Also, need to research how to convert column letters to numbers//
+  //use parseGuess maybe?? Also, need to research how to convert A-G column letters to numbers//
+  function parseGuess(guess) {
+
+}
 
 
-  
-//event handlers for fire button click and keypress for entering guess coordinates//
+//event handlers for fire button click and keyboard keypress for entering guess coordinates in input box//
+var fireButton = document.getElementById("fireButton");
+fireButton.onclick = handleFireButton;
+
+function handleFireButton() {
+
+}
