@@ -7,7 +7,7 @@ div#gameboard {
   width: 1024px;
   height: 823px;
   margin: auto;
-  background-image: url ("gameboard.jpg");
+  background-image: url("Assets\Images\gameboard.jpg");
   background-color: #cccccc;
 }
 
@@ -33,9 +33,9 @@ form input {
 }
 
 .hit {
-  background: url ("ship.png") no-repeat center;
+  background: url("ship.png") no-repeat center;
 }
 
 .miss {
-  background: url ("miss.png") no-repeat center;
+  background: url("miss.png") no-repeat center;
 }
