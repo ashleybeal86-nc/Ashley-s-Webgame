@@ -15,7 +15,6 @@ var view = {
   },
 };
 
-//set up parameters for ships//
 var shipmodel = {
   gameboardSize: 7,
   numShips: 3,
@@ -74,25 +73,37 @@ isSunk = function(ship) {
     var row;
     var col;
     if (direction === 1) {
-      var newShipLocations = [];
-      for (var i = 0; i < this.shipLength; i++);{
-        if (direction === 1) {
-        } else {
-        }
-      } 
+    row = Math.floor(Math.random() * this.boardSize);
+    col = math.floor(Math.Random() * (this.boardSize - (this.shipLength + 1)));
+   } else {
+     row = Math.floor(Math.random() * (this.boardSize - (this.shipLength + 1)));
+     col = Math.floor(Math.random() * this.boardSize);
+   }
+    
+   var newshipLocations = [];
+   for (var i = 0; i < this.shipLength; i++) {
+     if (direction === 1) {
+       newshipLocations.push(row + "" + (col + i));
+
+     } else }
+       newshipLocations.push((row + i) + "" + col);
+     }
+   }
     return newShipLocations;
   },
 
 
-
-
-
-
-
-
-
-
-
+  collision: function(locations) {
+    for (var i = 0; i < this.numShips; i++) {
+      var ship = this.ships[i];
+    for (var j = 0; j < locations.length; j++) {
+      if (ship.locations.indexOf(locations[j]) >= 0) {
+        return true;
+      }
+     }
+    }
+    return false;
+  }
 
 
 //function for guesses, (add criteria that =null if guess outside of coordinate area)//
