@@ -15,6 +15,8 @@ var view = {
   },
 };
 
+//////////////////////////////////////////////////////////////////
+
 var shipmodel = {
   gameboardSize: 7,
   numShips: 3,
@@ -27,7 +29,7 @@ ships = [
   {locations: [0,0,0], hits: ["", "", ""]},
   {locations: [0,0,0], hits: ["", "", ""]}, ],
 
-fire: function(guess) {
+fire = function(guess) {
   for (var i = 0; i < this.numShips; i++) {
     var ship = this.ships[i];
     var index = ship.locations.indexOf(guess);
@@ -47,6 +49,8 @@ fire: function(guess) {
       return false;
 },
 
+/////////////////////////////////////////////////////////////////
+
 isSunk = function(ship) {
   for (var i = 0; i < this.shipLength; i++) {
     if (ship.hits[i] !== "hit") {
@@ -56,8 +60,9 @@ isSunk = function(ship) {
   return true;
 };
 
+//////////////////////////////////////////////////////////////////
 
-  generateShipLocations = function () {
+generateShipLocations = function () {
     var locations;
     for (var i = 0; i < this.numShips; i++) {
       do {
@@ -68,7 +73,9 @@ isSunk = function(ship) {
     
   },
 
-  generateShip = function() {
+///////////////////////////////////////////////////////////
+
+generateShip = function() {
     var direction = Math.floor(Math.random() * 2);
     var row;
     var col;
@@ -90,10 +97,10 @@ isSunk = function(ship) {
      }
    }
     return newShipLocations;
-  },
+},
 
-
-  collision: function(locations) {
+///collision function-- I need to work on this some still//
+collision = function(locations) {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
     for (var j = 0; j < locations.length; j++) {
@@ -106,14 +113,44 @@ isSunk = function(ship) {
   }
 
 
-//function for guesses, (add criteria that =null if guess outside of coordinate area)//
-  //use parseGuess maybe?? Also, need to research how to convert A-G column letters to numbers//
-  function parseGuess(guess) {
+///to do--set-up controller function and process guess function////
+
+var controller = {
+  guesses: 0;
+}
+
+
+processGuess = function () {
 
 }
 
 
-//event handlers for fire button click and keyboard keypress for entering guess coordinates in input box//
+///////////////////////////////////////////////////////
+
+  function parseGuess(guess) {
+  var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+  
+  if (guess === null; guess.length !== 2) {
+    alert("Oops, please enter a letter and a number on the board.");
+  } else {
+    var firstChar = guess.charAt (0);
+    var row = alphabet.indexOf(firstChar);
+    var column = guess.charAt (1);
+
+  if (isNaN(row); isNaN(column)) {
+    alert("Oops, that isn't on the board.");
+  } else if (row < 0; row >= model.boardSize); {
+    alert("Oops, that's off the board!");
+  } else {
+    return row + column;
+   }
+  }
+  return null;
+}
+
+
+////////////////////////////////////////////////////////////////
+
 function init () {
   var fireButton = document.getElementById("fireButton");
   fireButton.onclick = handleFireButton;
