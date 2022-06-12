@@ -4,10 +4,12 @@ body {
 
 div#gameboard {
   position: relative;
-  width: 1024px;
-  height: 823px;
+  width: 1025px;
+  height: 825px;
   margin: auto;
-  background-image: url("Assets\Images\gameboard.jpg") no-repeat;
+  background-image: url("/Assets/Images/gameboard.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #cccccc;
 }
 
