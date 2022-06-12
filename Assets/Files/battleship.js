@@ -23,7 +23,7 @@ var model = {
       var index = ship.locations.indexOf(guess);
 
       if (ship.hits[index] === "hit") {
-        view.displayMessage("Oops, you already hit that location!");
+        view.displayMessage("You already hit that location!");
         return true;
       } else if (index >= 0) {
         ship.hits[index] = "hit";
@@ -63,7 +63,7 @@ var model = {
     console.log(this.ships);
   },
 
-  ///generate ship function and return new ship location function
+  ///generate ship function to return new ship location function
   //got help from https://www.w3schools.com/js/js_random.asp
   //got help from https://stackoverflow.com/questions/12272239/javascript-function-returning-an-object
 
@@ -159,21 +159,21 @@ function parseGuess(guess) {
   var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
   if (guess === null || guess.length !== 2) {
-    alert("Oops, please enter a letter and a number on the board!");
+    alert("Please enter a letter and a number on the board!");
   } else {
     var firstChar = guess.charAt(0);
     var row = alphabet.indexOf(firstChar);
     var column = guess.charAt(1);
 
     if (isNaN(row) || isNaN(column)) {
-      alert("Oops, that isn't on the board!");
+      alert("That isn't on the board!");
     } else if (
       row < 0 ||
       row >= model.boardSize ||
       column < 0 ||
       column >= model.boardSize
     ) {
-      alert("Oops, that's off the board!");
+      alert("That's off the board!");
     } else {
       return row + column;
     }
