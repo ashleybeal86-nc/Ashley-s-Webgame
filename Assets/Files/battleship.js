@@ -1,3 +1,6 @@
+///making the model object for ships
+ //got help from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+
 var model = {
   boardSize: 7,
   numShips: 3,
@@ -9,6 +12,10 @@ var model = {
     { locations: [0, 0, 0], hits: ["", "", ""] },
     { locations: [0, 0, 0], hits: ["", "", ""] },
   ],
+
+  ///fire function, is sunk function, generate ship location function
+  //got help from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+  //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
 
   fire: function (guess) {
     for (var i = 0; i < this.numShips; i++) {
@@ -56,6 +63,10 @@ var model = {
     console.log(this.ships);
   },
 
+  ///generate ship function and return new ship location function
+  //got help from https://www.w3schools.com/js/js_random.asp
+  //got help from https://stackoverflow.com/questions/12272239/javascript-function-returning-an-object
+
   generateShip: function () {
     var direction = Math.floor(Math.random() * 2);
     var row, col;
@@ -79,6 +90,10 @@ var model = {
     return newShipLocations;
   },
 
+  ///collision function
+  //got help from https://stackoverflow.com/questions/2440377/javascript-collision-detection
+  //got help from https://stackoverflow.com/questions/21435555/prevent-collision-or-intersection-of-canvas-objects
+  
   collision: function (locations) {
     for (var i = 0; i < this.numShips; i++) {
       var ship = this.ships[i];
@@ -91,6 +106,10 @@ var model = {
     return false;
   },
 };
+
+
+///display messages for hits and misses
+ //got help from https://stackoverflow.com/questions/30709036/how-to-use-innerhtml-to-display-text
 
 var view = {
   displayMessage: function (msg) {
@@ -109,6 +128,12 @@ var view = {
   },
 };
 
+
+
+///controller and process guess function
+   //got help from https://stackoverflow.com/questions/30392345/javascript-guessing-game-keeping-a-log-of-guesses
+
+
 var controller = {
   guesses: 0,
 
@@ -125,6 +150,10 @@ var controller = {
     }
   },
 };
+
+///converting players letter coordinate guess to number value
+ //got help from https://stackoverflow.com/questions/22624379/how-to-convert-letters-to-numbers-with-javascript
+ //got help from https://www.geeksforgeeks.org/number-guessing-game-using-javascript/
 
 function parseGuess(guess) {
   var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
@@ -152,6 +181,10 @@ function parseGuess(guess) {
   return null;
 }
 
+///firebutton and keypress functions & eventListeners
+ //got help from https://eloquentjavascript.net/2nd_edition/14_event.html
+//got help from https://www.w3schools.com/graphics/game_controllers.asp
+
 function handleFireButton() {
   var guessInput = document.getElementById("guessInput");
   var guess = guessInput.value.toUpperCase();
@@ -170,6 +203,10 @@ function handleKeyPress(e) {
     return false;
   }
 }
+
+
+////window onload and initialize
+ //got help from https://linuxhint.com/window-onload-event-in-javascript/#:~:text=JavaScript%20has%20a%20window%20onload,object%20is%20loaded%20in%20HTML.
 
 window.onload = init;
 

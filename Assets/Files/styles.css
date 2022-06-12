@@ -1,3 +1,6 @@
+
+/* free images for the game were downloaded from: https://archive.org/details/board_20170224  */
+
 body {
   background-color: black;
 }
@@ -5,7 +8,7 @@ body {
 div#gameboard {
   position: relative;
   width: 1025px;
-  height: 880px;
+  height: 890px;
   margin: auto;
   background-image: url("/Assets/Images/gameboard.jpg");
   background-repeat: no-repeat;
@@ -53,3 +56,4 @@ form input {
 .miss {
   background: url("/Assets/Images/miss.png") no-repeat center;
 }
+
