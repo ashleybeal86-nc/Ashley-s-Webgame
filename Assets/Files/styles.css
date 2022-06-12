@@ -5,12 +5,12 @@ body {
 div#gameboard {
   position: relative;
   width: 1025px;
-  height: 825px;
+  height: 880px;
   margin: auto;
   background-image: url("/Assets/Images/gameboard.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #cccccc;
+  background-color: black;
 }
 
 div#messageArea {
@@ -47,9 +47,9 @@ form input {
 }
 
 .hit {
-  background: url("ship.png") no-repeat center;
+  background: url("/Assets/Images/ship.png") no-repeat center;
 }
 
 .miss {
-  background: url("miss.png") no-repeat center;
+  background: url("/Assets/Images/miss.png") no-repeat center;
 }
