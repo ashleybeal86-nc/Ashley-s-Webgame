@@ -1,4 +1,3 @@
-
 /* all images for the game were free and downloaded from: https://archive.org/details/board_20170224  */
 
 body {
@@ -56,4 +55,3 @@ form input {
 .miss {
   background: url("/Assets/Images/miss.png") no-repeat center;
 }
-
