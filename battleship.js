@@ -59,7 +59,7 @@ var model = {
       } while (this.collision(locations));
       this.ships[i].locations = locations;
     }
-    console.log("Ships array: ");
+    console.log("Ships.array: ");
     console.log(this.ships);
   },
 
@@ -180,6 +180,7 @@ function parseGuess(guess) {
 ///firebutton and keypress functions & eventListeners
 //got help from https://eloquentjavascript.net/2nd_edition/14_event.html
 //got help from https://www.w3schools.com/graphics/game_controllers.asp
+//got help from http://gcctech.org/csc/javascript/javascript_keycodes.htm
 
 function handleFireButton() {
   var guessInput = document.getElementById("guessInput");
@@ -192,7 +193,7 @@ function handleFireButton() {
 
 function handleKeyPress(e) {
   var fireButton = document.getElementById("fireButton");
-  e = e || window.event;
+  e = e  || window.event;
 
   if (e.keyCode === 13) {
     fireButton.click();
