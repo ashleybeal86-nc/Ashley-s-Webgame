@@ -1,3 +1,3 @@
 # Ashley-s-Webgame
 
-Thanks for playing Ashley's Webgame! This has been very nostalgic of my childhood and I have always loved playing both board and computer games.  I love the creative process and being able to make something from nothing...which is precisely what drew me to web development in the first place.  Anyway, good luck and have fun!!!!
+Thanks for playing Ashley's Webgame! This has been a very nostalgic game of my childhood and I have many fond memories of playing the original boardgame version with my family and friends.  The theme music is optional, but very fitting for the theme of my game.  I hope you enjoy my game and have fun playing!    
